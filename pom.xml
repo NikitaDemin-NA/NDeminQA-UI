@@ -14,19 +14,20 @@
     </properties>
 
         <dependencies>
+            <!--FOR UI-->
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
                 <version>3.141.5</version>
             </dependency>
             <dependency>
-                <groupId>com.typesafe</groupId>
-                <artifactId>config</artifactId>
-                <version>1.4.1</version>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-chrome-driver</artifactId>
+                <version>3.141.5</version>
             </dependency>
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-chrome-driver</artifactId>
+                <artifactId>selenium-api</artifactId>
                 <version>3.141.5</version>
             </dependency>
             <dependency>
@@ -39,11 +40,8 @@
                 <artifactId>webdrivermanager</artifactId>
                 <version>4.4.3</version>
             </dependency>
-            <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-api</artifactId>
-                <version>3.141.5</version>
-            </dependency>
+
+            <!--JUNIT-->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
@@ -51,108 +49,15 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>io.rest-assured</groupId>
-                <artifactId>rest-assured</artifactId>
-                <version>4.4.0</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-junit5</artifactId>
-                <version>2.13.1</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-            <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>5.9.2</version>
                 <scope>test</scope>
             </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-params</artifactId>
                 <version>5.9.0</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>5.3.25</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-            <dependency>
-                <groupId>io.cucumber</groupId>
-                <artifactId>cucumber-java</artifactId>
-                <version>7.9.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.26</version>
-                <scope>provided</scope>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-proxy -->
-            <dependency>
-                <groupId>net.lightbody.bmp</groupId>
-                <artifactId>browsermob-proxy</artifactId>
-                <version>2.0.0</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/com.browserup/browserup-proxy-core -->
-            <dependency>
-                <groupId>com.browserup</groupId>
-                <artifactId>browserup-proxy-core</artifactId>
-                <version>2.1.1</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>4.1.90.Final</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/io.netty/netty-codec -->
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-codec</artifactId>
-                <version>4.1.90.Final</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk16 -->
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk15on</artifactId>
-                <version>1.64</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.servicemix.bundles/org.apache.servicemix.bundles.bcprov-jdk15on -->
-            <dependency>
-                <groupId>org.apache.servicemix.bundles</groupId>
-                <artifactId>org.apache.servicemix.bundles.bcprov-jdk15on</artifactId>
-                <version>1.70_1</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/com.browserup/browserup-proxy-mitm -->
-            <dependency>
-                <groupId>com.browserup</groupId>
-                <artifactId>browserup-proxy-mitm</artifactId>
-                <version>2.1.2</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/net.lightbody.bmp/mitm -->
-            <dependency>
-                <groupId>net.lightbody.bmp</groupId>
-                <artifactId>mitm</artifactId>
-                <version>2.1.2</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-core -->
-            <dependency>
-                <groupId>net.lightbody.bmp</groupId>
-                <artifactId>browsermob-core</artifactId>
-                <version>2.1.5</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.servicemix.bundles/org.apache.servicemix.bundles.junit -->
-            <dependency>
-                <groupId>org.apache.servicemix.bundles</groupId>
-                <artifactId>org.apache.servicemix.bundles.junit</artifactId>
-                <version>4.13.2_1</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/junit/junit -->
             <dependency>
@@ -173,16 +78,98 @@
                 <version>5.9.2</version>
                 <scope>compile</scope>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+            <dependency>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-junit5</artifactId>
+                <version>2.13.1</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!--PROXY-->
+            <dependency>
+                <groupId>net.lightbody.bmp</groupId>
+                <artifactId>browsermob-proxy</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.browserup</groupId>
+                <artifactId>browserup-proxy-core</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.90.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-codec</artifactId>
+                <version>4.1.90.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>1.64</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.bcprov-jdk15on</artifactId>
+                <version>1.70_1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.browserup</groupId>
+                <artifactId>browserup-proxy-mitm</artifactId>
+                <version>2.1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>net.lightbody.bmp</groupId>
+                <artifactId>mitm</artifactId>
+                <version>2.1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>net.lightbody.bmp</groupId>
+                <artifactId>browsermob-core</artifactId>
+                <version>2.1.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.junit</artifactId>
+                <version>4.13.2_1</version>
+            </dependency>
+
+            <!--OTHERS-->
+            <dependency>
+                <groupId>com.typesafe</groupId>
+                <artifactId>config</artifactId>
+                <version>1.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>4.4.0</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>5.3.25</version>
+            </dependency>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-java</artifactId>
+                <version>7.9.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.26</version>
+                <scope>provided</scope>
+            </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>5.2.3</version>
             </dependency>
-
-
-
-
         </dependencies>
 
         <build>
