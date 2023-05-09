@@ -1,20 +1,36 @@
-Hello everybody=)
+<h1 align="center">Hi 👋, I'm Nikita Demin</h1>
+<h3 align="center">Senior Manual QA, Senior Automation QA, SDET</h3>
 
-This is my **automation UI** test with my test site (http://ndemin.qa.tilda.ws/)
+<h3 align="left">Hello everybody=)
 
-**How to launch:**
+This is my **automation UI** test with my test site (http://ndemin.qa.tilda.ws/)</h3>
+<p align="left">
+</p>
+
+
+<h3 align="left">How to launch:</h3>
+<p align="left">
+</p>
 Press "Run Test" in "UITest" (src/test/java/UITest.java) 
 
-**How to turn on/off parrallel launch:**
+<h3 align="left">How to turn on/off parrallel launch:</h3>
+<p align="left">
+</p>
 Write "true/false" in "junit.jupiter.execution.parallel.enabled" (src/test/resources/junit-platform.properties) 
 
-**Tech stack:**
+<h3 align="left">Tech stack:</h3>
+<p align="left">
+</p>
+
   * Java
   * Junit
   * Selenide
   * PageObject
 
-**Test cases:**
+<h3 align="left">Test cases:</h3>
+<p align="left">
+</p>
+
 1) Check Main page (checkMainPage)
   * open main page
   * check head name
