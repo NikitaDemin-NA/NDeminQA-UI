@@ -2,6 +2,8 @@ import lombok.SneakyThrows;
 import ndemin_autotest_ui.BaseClass;
 import ndemin_autotest_ui.pages.*;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
@@ -16,6 +18,7 @@ import static ndemin_autotest_ui.Constants.TextPageConstants.TYPES_OF_TESTING_AR
 
 @Tag("NDemin.QA")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Execution(ExecutionMode.CONCURRENT)
 public class UITest extends BaseClass {
 
     MainPage mainPage = new MainPage();
