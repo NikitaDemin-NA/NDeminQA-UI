@@ -31,7 +31,7 @@ public class RegistrationPage implements ArgumentsProvider {
     }
 
     @Given("Fill fields for registration")
-    public void makeRegistration(String name, String surname, String comment) {
+    public void signUp(String name, String surname, String comment) {
         fieldName.sendKeys(name);
         fieldSurname.sendKeys(surname);
         fieldComment.sendKeys(comment);
@@ -39,7 +39,7 @@ public class RegistrationPage implements ArgumentsProvider {
     }
 
     @Given("Check success registration")
-    public void checkSuccessRegistration() {
+    public void checkSuccessfulRegistration() {
         Selenide.switchTo().window(REGISTRATION_SUCCESS_WINDOW);
         successRegistationText.should(exist);
         closeWindow();

@@ -42,8 +42,8 @@ public class UITest extends BaseClass {
         mainPage.open().clickPage(REGISTRATION_PAGE_NAME);
 
         registrationPage.checkHeadName(REGISTRATION_PAGE_HEADNAME);
-        registrationPage.makeRegistration(name, surname, comment);
-        registrationPage.checkSuccessRegistration();
+        registrationPage.signUp(name, surname, comment);
+        registrationPage.checkSuccessfulRegistration();
     }
 
     @Test
