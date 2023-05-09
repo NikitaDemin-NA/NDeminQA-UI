@@ -8,12 +8,12 @@ This is my **automation UI** test with my test site (http://ndemin.qa.tilda.ws/)
 </p>
 
 
-<h3 align="left">How to launch:</h3>
+<h3 align="left">🚀 How to launch:</h3>
 <p align="left">
 </p>
 Press "Run Test" in "UITest" (src/test/java/UITest.java) 
 
-<h3 align="left">How to turn on/off parrallel launch:</h3>
+<h3 align="left">🔥 How to turn on/off parrallel launch:</h3>
 <p align="left">
 </p>
 Write "true/false" in "junit.jupiter.execution.parallel.enabled" (src/test/resources/junit-platform.properties) 
