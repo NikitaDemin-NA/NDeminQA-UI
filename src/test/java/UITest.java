@@ -1,25 +1,27 @@
+import io.qameta.allure.Owner;
 import lombok.SneakyThrows;
 import ndemin_autotest_ui.BaseClass;
-import ndemin_autotest_ui.pages.*;
+import ndemin_autotest_ui.pages.RegistrationPage;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
-import static ndemin_autotest_ui.PageManager.*;
 import static ndemin_autotest_ui.Constants.ContactsPageConstants.CONTACTS_PAGE_NAME;
 import static ndemin_autotest_ui.Constants.ContactsPageConstants.MAP_OF_CONTACTS;
-import static ndemin_autotest_ui.Constants.FilesPageConstants.*;
+import static ndemin_autotest_ui.Constants.FilesPageConstants.FILES_PAGE_NAME;
+import static ndemin_autotest_ui.Constants.MainPageConstants.MAIN_PAGE_HEADNAME;
 import static ndemin_autotest_ui.Constants.RegistrationPageConstants.REGISTRATION_PAGE_HEADNAME;
 import static ndemin_autotest_ui.Constants.RegistrationPageConstants.REGISTRATION_PAGE_NAME;
-import static ndemin_autotest_ui.Constants.MainPageConstants.MAIN_PAGE_HEADNAME;
 import static ndemin_autotest_ui.Constants.TextPageConstants.TEXT_PAGE_NAME;
 import static ndemin_autotest_ui.Constants.TextPageConstants.TYPES_OF_TESTING_ARRAY;
+import static ndemin_autotest_ui.PageManager.*;
 
 @Tag("NDemin.QA")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Execution(ExecutionMode.CONCURRENT)
+@Owner("Nikita Demin")
 public class UITest extends BaseClass {
 
     @Test
