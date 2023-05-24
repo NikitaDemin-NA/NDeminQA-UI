@@ -7,6 +7,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
+import static ndemin_autotest_ui.PageManager.*;
 import static ndemin_autotest_ui.Constants.ContactsPageConstants.CONTACTS_PAGE_NAME;
 import static ndemin_autotest_ui.Constants.ContactsPageConstants.MAP_OF_CONTACTS;
 import static ndemin_autotest_ui.Constants.FilesPageConstants.*;
@@ -20,12 +21,6 @@ import static ndemin_autotest_ui.Constants.TextPageConstants.TYPES_OF_TESTING_AR
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Execution(ExecutionMode.CONCURRENT)
 public class UITest extends BaseClass {
-
-    MainPage mainPage = new MainPage();
-    RegistrationPage registrationPage = new RegistrationPage();
-    FilesPage filesPage = new FilesPage();
-    TextPage textPage = new TextPage();
-    ContactsPage contactsPage = new ContactsPage();
 
     @Test
     @DisplayName("Check MainPage")
