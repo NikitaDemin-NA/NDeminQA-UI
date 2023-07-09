@@ -1,10 +1,8 @@
-# UI test with my test site (http://ndemin.qa.tilda.ws/)
-
-
-**Hi, I'm Nikita Demin**
+<h1 align="center">Hi 👋, I'm Nikita Demin</h1>
 
 **Senior Manual QA, Senior Automation QA, SDET**
 
+**This is UI test with my test site [NDemin.QA](http://ndemin.qa.tilda.ws/)**
 
 ## ⚙ Tech stack:
 * Java
