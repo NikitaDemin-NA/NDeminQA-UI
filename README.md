@@ -1,9 +1,9 @@
-<h1 align="center">
-Hi, I'm Nikita Demin </h1>
+# UI test with my test site (http://ndemin.qa.tilda.ws/)
+
+
+**Hi, I'm Nikita Demin**
 
 **Senior Manual QA, Senior Automation QA, SDET**
-
-**This is my UI test with my test site (http://ndemin.qa.tilda.ws/)**
 
 
 ## ⚙ Tech stack:
