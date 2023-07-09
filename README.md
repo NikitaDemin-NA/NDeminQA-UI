@@ -1,25 +1,26 @@
-<h1 align="center">Hi 👋, I'm Nikita Demin</h1>
-<h2 align="center">Senior Manual QA, Senior Automation QA, SDET</h2>
+<h1 align="center">
+Hi 👋, I'm Nikita Demin
 
-<h3>This is my **UI** test with my test site (http://ndemin.qa.tilda.ws/)</h3>
-<p align="left">
-</p>
+Senior Manual QA, Senior Automation QA, SDET
 
-## ⚙ Tech stack:
+This is my UI test with my test site (http://ndemin.qa.tilda.ws/)
+</h1>
+
+## Tech stack:
 * Java
 * Junit
 * Selenide
 * PageObject
 
-## 🚀 How to launch:
+## How to launch:
 
 Press `Run Test` in "UITest" (src/test/java/UITest.java)
 
-## 🔥 How to turn on/off parrallel launch:
+## How to turn on/off parrallel launch:
 
 Write `true/false` in "junit.jupiter.execution.parallel.enabled" (src/test/resources/junit-platform.properties)
 
-<h1 align="left">Test cases:</h1>
+## Test cases:
 
 *  **Check Main page** (`checkMainPage`)
 1) open main page
