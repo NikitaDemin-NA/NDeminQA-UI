@@ -23,4 +23,6 @@ public interface PropertiesProvider {
     String REGISTRATION_COMMENT = readProperties().getProperty("registration.comment");
 
     String PATH_FILES = readProperties().getProperty("path.files");
+
+    String PATH_DRIVER_MANAGER_WINDOWS = readProperties().getProperty("path.driverManager.windows");
 }

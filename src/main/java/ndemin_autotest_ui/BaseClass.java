@@ -10,9 +10,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
+import static ndemin_autotest_ui.PropertiesProvider.PATH_DRIVER_MANAGER_WINDOWS;
 import static ndemin_autotest_ui.PropertiesProvider.PATH_FILES;
 
 abstract public class BaseClass {
+
+   private final String os = System.getProperty("os.name");
+   private final String pathDriverManagerMac = "src/test/resources/drivers/chromedriverMac";
+   private final String pathDriverManagerLinux = "src/test/resources/drivers/chromedriverLinux";
 
     @BeforeAll
     static void setupAllureReports() {
@@ -21,7 +26,14 @@ abstract public class BaseClass {
 
     @SneakyThrows
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
+        if (os.contains("Windows")){
+            setDriverManager(PATH_DRIVER_MANAGER_WINDOWS);
+        } else if (os.contains("Mac OS")) {
+            setDriverManager(pathDriverManagerMac);
+        } else {
+            setDriverManager(pathDriverManagerLinux);
+        }
+
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
@@ -40,5 +52,9 @@ abstract public class BaseClass {
     @AfterEach
     public void tearDown() {
         Selenide.closeWebDriver();
+    }
+
+    private void setDriverManager(String pathWebDriverManager){
+        System.setProperty("webdriver.chrome.driver", pathWebDriverManager);
     }
 }
