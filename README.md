@@ -12,11 +12,11 @@
 
 ## 🚀 How to launch:
 
-Press `Run Test` in "UITest" (src/test/java/UITest.java)
+Press `Run Test` in "UITest" `src/test/java/UITest.java`
 
 ## 🔥 How to turn on/off parrallel launch:
 
-Write `true/false` in "junit.jupiter.execution.parallel.enabled" (src/test/resources/junit-platform.properties)
+Write `true/false` in "junit.jupiter.execution.parallel.enabled" `src/test/resources/junit-platform.properties`
 
 ## Test cases:
 
