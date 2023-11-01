@@ -16,7 +16,7 @@ import static ndemin_autotest_ui.PropertiesProvider.PATH_FILES;
 abstract public class BaseClass {
 
    private final String os = System.getProperty("os.name");
-   private final String pathDriverManagerMac = "src/test/resources/drivers/chromedriverMac";
+   private final String pathDriverManagerMac = "src/test/resources/drivers/chromedriverMac119";
    private final String pathDriverManagerLinux = "src/test/resources/drivers/chromedriverLinux";
 
     @BeforeAll
@@ -26,13 +26,14 @@ abstract public class BaseClass {
 
     @SneakyThrows
     public void setUp() {
-        if (os.contains("Windows")){
-            setDriverManager(PATH_DRIVER_MANAGER_WINDOWS);
-        } else if (os.contains("Mac OS")) {
-            setDriverManager(pathDriverManagerMac);
-        } else {
-            setDriverManager(pathDriverManagerLinux);
-        }
+        WebDriverManager.chromedriver().setup();
+//        if (os.contains("Windows")){
+//            setDriverManager(PATH_DRIVER_MANAGER_WINDOWS);
+//        } else if (os.contains("Mac OS")) {
+//            setDriverManager(pathDriverManagerMac);
+//        } else {
+//            setDriverManager(pathDriverManagerLinux);
+//        }
 
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
