@@ -1,7 +1,6 @@
-package ndemin_autotest_ui.Constants;
+package ru.ndemin.ui.constants;
 
 public class FilesPageConstants {
-
     public static final String FILES_PAGE_NAME = "Files";
     public static final String FILES_PAGE_PNG = "Download test.png";
     public static final String FILES_PAGE_TXT = "Download test.txt";

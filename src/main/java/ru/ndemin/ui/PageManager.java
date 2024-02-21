@@ -1,9 +1,8 @@
-package ndemin_autotest_ui;
+package ru.ndemin.ui;
 
-import ndemin_autotest_ui.pages.*;
+import ru.ndemin.ui.pages.*;
 
 public interface PageManager {
-
     MainPage mainPage = new MainPage();
     RegistrationPage registrationPage = new RegistrationPage();
     FilesPage filesPage = new FilesPage();

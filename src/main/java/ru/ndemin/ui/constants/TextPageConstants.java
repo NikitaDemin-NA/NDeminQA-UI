@@ -1,4 +1,4 @@
-package ndemin_autotest_ui.Constants;
+package ru.ndemin.ui.constants;
 
 public class TextPageConstants {
 

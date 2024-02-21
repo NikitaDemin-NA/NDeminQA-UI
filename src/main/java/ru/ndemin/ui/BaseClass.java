@@ -1,4 +1,4 @@
-package ndemin_autotest_ui;
+package ru.ndemin.ui;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -10,10 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-import static ndemin_autotest_ui.PropertiesProvider.PATH_FILES;
-
 abstract public class BaseClass {
-
     @BeforeAll
     static void setupAllureReports() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -29,7 +26,7 @@ abstract public class BaseClass {
         Configuration.pageLoadTimeout = 20000;
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 20000;
-        Configuration.downloadsFolder = PATH_FILES;
+        Configuration.downloadsFolder = PropertiesProvider.PATH_FILES;
     }
 
     @BeforeEach

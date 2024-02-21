@@ -1,4 +1,4 @@
-package ndemin_autotest_ui.pages;
+package ru.ndemin.ui.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import io.cucumber.java.en.Given;
@@ -10,10 +10,9 @@ import static com.codeborne.selenide.Selenide.$$x;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ContactsPage {
-
-    String contactsList = "//div[@class='t1028__btn__text']";
-    ElementsCollection contactsListName = $$x(contactsList);
-    ElementsCollection contactsListHref = $$x(contactsList + "//parent::a");
+    private final String contactsList = "//div[@class='t1028__btn__text']";
+    private final ElementsCollection contactsListName = $$x(contactsList);
+    private final ElementsCollection contactsListHref = $$x(contactsList + "//parent::a");
 
     @Given("Check Contacts")
     public void checkContacts(Map<String, String> contactsMap) {

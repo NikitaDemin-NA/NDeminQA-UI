@@ -1,11 +1,10 @@
-package ndemin_autotest_ui;
+package ru.ndemin.ui;
 
 import lombok.SneakyThrows;
 
 import java.util.Properties;
 
 public interface PropertiesProvider {
-
     @SneakyThrows
     static Properties readProperties() {
         System.getProperties().load(ClassLoader.getSystemResourceAsStream("application.properties"));

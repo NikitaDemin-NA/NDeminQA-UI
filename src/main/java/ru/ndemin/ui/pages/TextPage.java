@@ -1,4 +1,4 @@
-package ndemin_autotest_ui.pages;
+package ru.ndemin.ui.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import io.cucumber.java.en.Given;
@@ -11,8 +11,7 @@ import static com.codeborne.selenide.Selenide.$$x;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TextPage {
-
-    ElementsCollection typesOfTestingList = $$x("//p[@style='text-align: left;']");
+    private final ElementsCollection typesOfTestingList = $$x("//p[@style='text-align: left;']");
 
     @Given("Check Types of Testing")
     public void checkTypesOfTesting(String[] typesOfTestingArray) {

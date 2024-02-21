@@ -1,4 +1,4 @@
-package ndemin_autotest_ui.pages;
+package ru.ndemin.ui.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import io.cucumber.java.en.Given;
@@ -13,22 +13,21 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static ndemin_autotest_ui.Constants.FilesPageConstants.*;
-import static ndemin_autotest_ui.PropertiesProvider.PATH_FILES;
+import static ru.ndemin.ui.constants.FilesPageConstants.*;
+import static ru.ndemin.ui.PropertiesProvider.PATH_FILES;
 import static org.apache.commons.io.FileUtils.readFileToString;
 import static org.apache.commons.io.FileUtils.sizeOf;
 import static org.junit.Assert.assertEquals;
 
 public class FilesPage {
+    private final String downloadFiles = "//a[@class='t1075__link ' ]//*[contains(text(), '";
+    private final SelenideElement downloadFilePNG = $x(downloadFiles + FILES_PAGE_PNG + "')]//ancestor::a");
+    private final SelenideElement downloadFileTXT = $x(downloadFiles + FILES_PAGE_TXT + "')]//ancestor::a");
+    private final SelenideElement downloadFileExcel = $x(downloadFiles + FILES_PAGE_EXCEL + "')]//ancestor::a");
 
-    String downloadFiles = "//a[@class='t1075__link ' ]//*[contains(text(), '";
-    SelenideElement downloadFilePNG = $x(downloadFiles + FILES_PAGE_PNG + "')]//ancestor::a");
-    SelenideElement downloadFileTXT = $x(downloadFiles + FILES_PAGE_TXT + "')]//ancestor::a");
-    SelenideElement downloadFileExcel = $x(downloadFiles + FILES_PAGE_EXCEL + "')]//ancestor::a");
-
-    String downloadFilePNGPath;
-    String downloadFileTXTPath;
-    String downloadFileExcelPath;
+    private String downloadFilePNGPath;
+    private String downloadFileTXTPath;
+    private String downloadFileExcelPath;
 
     @Given("Download file {string}")
     public void downloadFiles() throws FileNotFoundException {
@@ -63,9 +62,9 @@ public class FilesPage {
                 getCellData(sheet, 0, 0));
     }
 
-    public static String getCellData(XSSFSheet sheet, int RowNum, int ColNum) throws Exception {
+    public static String getCellData(XSSFSheet sheet, int rowNum, int colNum) throws Exception {
         try {
-            XSSFCell cell = sheet.getRow(RowNum).getCell(ColNum);
+            XSSFCell cell = sheet.getRow(rowNum).getCell(colNum);
             return cell.getStringCellValue();
         } catch (Exception e) {
             return "Error";
